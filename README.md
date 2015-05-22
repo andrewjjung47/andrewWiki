@@ -4,6 +4,7 @@
 <img src="img/demo1.jpg" alt="main page" width=458 height=292/>
 #### Add path after andrea-shinnigan.appspot.com/ navigate to a page. 
 For example, andrea-shinnigan.appspot.com/newpage.
+
 <img src="img/demo2.jpg" alt="main page" width=458 height=292/>
 #### If you are logged-in and a page does not exist for a path, the site allows you to add a new page. 
 For example, if there is no page for andrea-shinnigan.appspot.com/nopage and you are logged-in, 
