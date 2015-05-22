@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="post">
+    <div class="signup-area">
+        <h2>Sign-up</h2>
+        <br>
+        Please enter <b>username</b> and <b>password</b> (<b>email</b> is optional) 
+        <br>
+        <br>
+        <label>
+            <span class="section-signup"><b>Username</b></span> 
+            <input type="text" name="username" value="{{ username }}">
+        </label> 
+        <label>
+            <span class="section-signup"><b>Password</b></span>
+            <input type="password" name="password" value="{{ password }}">
+        </label> 
+        <label>
+            <span class="section-signup"><b>Verify password</b></span>
+            <input type="password" name="verify" value="{{ vpassword }}">
+        </label> 
+        <label>
+            <span class="section-signup"><b>E-mail (optional)</b></span>
+            <input type="text" name="email" value="{{ email }}">
+        </label>
+        <br>
+        <input type="submit">
+        <div style="color: red"><br><h2>{{ error }}</h2></div>
+    </div>
+</form>
+
+{% endblock %}

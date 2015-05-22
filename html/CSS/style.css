@@ -1,0 +1,84 @@
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
+
+.login-wrapper, .welcome-wrapper {
+    max-width: 580px;
+    padding: 20px 40px 80px 40px;
+    margin: auto;
+    margin-top: 80px;
+    background-color: #eee;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px;
+}
+
+.form-signup {
+    max-width: 400px;
+    margin: auto;
+}
+
+.signup-wrapper {
+    max-width: 480px;
+    padding: 20px 40px 40px;
+    margin: auto;
+    margin-top: 80px;
+    background-color: #eee;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px;
+}
+
+.glyphicon-form {
+    display: inline-block;
+    width: 93%;
+}
+
+.has-error .form-control-feedback {
+    color: #a94442;
+}
+
+.has-success .form-control-feedback {
+    color: #3c763d;
+}
+
+.form-horizontal .form-group {
+    margin: 0;
+}
+
+.btn-block {
+    width: 93%;
+}
+
+.to-home {
+    float: right;
+}
+
+.error {
+    color: #a94442;
+}
+
+.form-edit {
+    max-width: 800px;
+    margin: auto;
+    min-height: 400px;
+    resize: none;
+}
+
+.edit-submit {
+    max-width: 100px;
+    float: right;
+}
+
+.edit-wrapper {
+    max-width: 900px;
+    padding: 20px 40px 80px 40px;
+    margin: auto;
+    margin-top: 40px;
+    background-color: #eee;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px;
+}
+
+.history-table {
+    max-width: 900px;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 16px;
+}

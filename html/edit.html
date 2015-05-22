@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="edit-wrapper">
+        <h2>Edit page content</h2>
+        <form class="form-horizontal form-edit" role="form" method="post">
+            <textarea class="form-control form-edit" name="content">{{content}}</textarea>
+            <br>
+            <button class="btn btn-lg btn-block btn-primary edit-submit" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

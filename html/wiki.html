@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="jumbotron">{{content}}
+    {% if error_wiki %}
+        <h2 class="error">This wiki page does not exist. Login to add a page.</h2>
+    {% elif error_edit %}
+        <h2 class="error">You must be logged in to edit a page.</h2>
+    {% elif error_history %}
+        <h2 class="error">You must be logged in to view a page history.</h2>
+    {% endif %}
+    </div>
+</div>
+
+{% endblock %}

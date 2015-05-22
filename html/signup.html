@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="signup-wrapper">
+        <form class="form-horizontal form-signup" role="form" method="post">
+            <h2>Sign up</h2>
+            {% if error_username or error_account %}
+                {% set status = " has-error has-feedback" %}
+                {% set placeholder = error_username %}
+                {% set nameGlyphi = " glyphicon-remove" %}
+            {% elif initial %}
+                {% set status = "" %}
+                {% set placeholder = "Username" %}
+                {% set nameGlyphi = " sr-only" %}
+            {% else %}
+                {% set status = " has-success has-feedback" %}
+                {% set placeholder = "Username" %}
+                {% set nameGlyphi = " glyphicon-ok" %}
+            {% endif %}
+            <div class="form-group{{status}}">
+                <label for="inputUsername" class="control-label">Username</label>
+                <input type="text" class="form-control glyphicon-form" id="inputUsername" name="username" value="{{username}}" placeholder="{{placeholder}}">
+                <span class="glyphicon{{nameGlyphi}} form-control-feedback" aria-hidden="true"></span>
+            </div>
+            {% if error_username %}
+                <div class="error">
+                    {{error_username}}
+                </div>
+            {% elif error_account %}
+                <div class="error">
+                    {{error_account}}
+                </div>
+            {% else %}
+                <br>
+            {% endif %}
+
+            {% if error_password %}
+                {% set status = " has-error has-feedback" %}
+                {% set placeholder = error_password %}
+                {% set nameGlyphi = " glyphicon-remove" %}
+            {% elif initial %}
+                {% set status = "" %}
+                {% set placeholder = "Password" %}
+                {% set nameGlyphi = " sr-only" %}
+            {% else %}
+                {% set status = " has-success has-feedback" %}
+                {% set placeholder = "Password" %}
+                {% set nameGlyphi = " glyphicon-ok" %}
+            {% endif %}
+            <div class="form-group{{status}}">
+                <label for="inputPassword" class="control-label">Password</label>
+                <input type="password" class="form-control glyphicon-form" id="inputPassword" name="password" value="{{password}}" placeholder="{{placeholder}}">
+                <span class="glyphicon{{nameGlyphi}} form-control-feedback" aria-hidden="true"></span>
+            </div>
+            {% if error_password %}
+                <div class="error">
+                    {{error_password}}
+                </div>
+            {% else %}
+                <br>
+            {% endif %}
+
+            {% if error_verify %}
+                {% set status = " has-error has-feedback" %}
+                {% set placeholder = error_verify %}
+                {% set nameGlyphi = " glyphicon-remove" %}
+            {% elif initial %}
+                {% set status = "" %}
+                {% set placeholder = "Confirm password" %}
+                {% set nameGlyphi = " sr-only" %}
+            {% else %}
+                {% set status = " has-success has-feedback" %}
+                {% set placeholder = "Confirm password" %}
+                {% set nameGlyphi = " glyphicon-ok" %}
+            {% endif %}
+            <div class="form-group{{status}}">
+                <label for="inputConfirmPassword" class="control-label">Confirm Password</label>
+                <input type="password" class="form-control glyphicon-form" id="inputConfirmPassword" name="verify" value="" placeholder="{{placeholder}}">
+                <span class="glyphicon{{nameGlyphi}} form-control-feedback" aria-hidden="true"></span>
+            </div>
+            {% if error_verify %}
+                <div class="error">
+                    {{error_verify}}
+                </div>
+            {% else %}
+                <br>
+            {% endif %}
+
+            {% if error_email%}
+                {% set status = " has-error has-feedback" %}
+                {% set placeholder = error_email %}
+                {% set nameGlyphi = " glyphicon-remove" %}
+            {% elif initial %}
+                {% set status = "" %}
+                {% set placeholder = "Email (optional)" %}
+                {% set nameGlyphi = " sr-only" %}
+            {% else %}
+                {% set status = " has-success has-feedback" %}
+                {% set placeholder = "Email (optional)" %}
+                {% set nameGlyphi = " glyphicon-ok" %}
+            {% endif %}
+            <div class="form-group{{status}}">
+                <label for="inputEmail" class="control-label">Email (optional)</label>
+                <input type="text" class="form-control glyphicon-form" id="inputEmail" name="email" value="{{email}}" placeholder="{{placeholder}}">
+                <span class="glyphicon{{nameGlyphi}} form-control-feedback" aria-hidden="true"></span>
+            </div>
+            {% if error_email %}
+                <div class="error">
+                    {{error_email}}
+                </div>
+            {% else %}
+                <br>
+            {% endif %}
+
+            <br>
+            <button class="btn btn-lg btn-block btn-primary" type="submit">Sign up</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

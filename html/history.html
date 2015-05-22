@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+        {% if page %}
+            <table class="history-table table table-bordered table-hover table-responsive">
+                <tr>
+                    <th>Modified Date</th>
+                    <th colspan="2">Content</th>
+                </tr>
+                {% for index in range(-1, -(page.content|length + 1), -1) %}
+                    <tr>
+                        <td>{{page.modified[index]}}</td>
+                        <td>{{page.content[index]}}</td>
+                        <td>
+                            <form action="{{url}}" method="get">
+                                <a href="#" class="history-view">view</a>
+                                <input type="hidden" name="v" value="{{index}}">
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endif %}
+</div>
+
+{% endblock %}
